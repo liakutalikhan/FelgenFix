@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="40" viewBox="0 0 72 40">
+  <g id="both-arrow" transform="translate(-970 -6900)">
+    <g id="arrow" transform="translate(1042 6900) rotate(90)" fill="rgba(255,255,255,0.2)">
+      <path d="M 35.93827438354492 24 L 4.061727046966553 24 L 20 3.280245065689087 L 35.93827438354492 24 Z" stroke="none"/>
+      <path d="M 20 6.560489654541016 L 8.123453140258789 22 L 31.87654495239258 22 L 20 6.560489654541016 M 20 0 L 40 26 L 0 26 L 20 0 Z" stroke="none" fill="#fff"/>
+    </g>
+    <g id="arrow-2" data-name="arrow" transform="translate(970 6940) rotate(-90)" fill="rgba(255,255,255,0.2)">
+      <path d="M 35.93827438354492 24 L 4.061727046966553 24 L 20 3.280245065689087 L 35.93827438354492 24 Z" stroke="none"/>
+      <path d="M 20 6.560489654541016 L 8.123453140258789 22 L 31.87654495239258 22 L 20 6.560489654541016 M 20 0 L 40 26 L 0 26 L 20 0 Z" stroke="none" fill="#fff"/>
+    </g>
+  </g>
+</svg>

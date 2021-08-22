@@ -1,0 +1,1242 @@
+:root {
+
+    /* Color List */
+    --cP: #E24010;
+    --cS: #787C80;
+    --cWhite: #fff;
+    --cBlack: #222C39;
+    --cGn: linear-gradient(135deg, rgba(88, 199, 221, 1) 0%, rgba(37, 66, 99, 1) 100%);
+    --cGn2: linear-gradient(145deg, rgba(88, 199, 221, 1) 0%, rgba(37, 66, 99, 1) 100%);
+    --cGnr: linear-gradient(0deg, rgba(37, 66, 99, 1) 0%, rgba(88, 199, 221, 1) 100%);
+    --cOvl: rgba(99, 203, 224, 0.22);
+    /* Backgroud Color */
+    --bgP: #222C39;
+    --bgS: #EFEFEF;
+}
+
+/* @font-face {
+    font-family:"TacticSansExd-BlkIt";
+    src: url(../fonts/TacticSansExd-BlkIt.otf);
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "TacticSansExd-LgtIt";
+    src: url(../fonts/TacticSansExd-LgtIt.otf);
+    font-style: italic;
+    font-weight: 300;
+} */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* scree overlay */
+
+[class*="screen"].open {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    transition: .3s;
+    backdrop-filter: blur(4px);
+    background: rgba(255,255,255,.1);
+}
+
+
+/* Cusotm Grid Stytem By Liakut Ali Khan */
+
+[class*="container"] {
+    --gutterX: 16px;
+}
+
+[class~="container"] {
+    margin: auto;
+    max-width: 100%;
+    padding: 0 var(--gutterX);
+}
+
+[class*="container-"] {
+    margin: auto;
+    max-width: 100%;
+    padding: 0 var(--gutterX);
+}
+
+[class*="container_"] {
+    margin: auto;
+    max-width: 100%;
+    padding: 0 var(--gutterX);
+}
+
+
+/* Wrapper */
+
+[class*="wrapper"] {
+    --gutterX: 16px;
+}
+
+[class~="wrapper"] {
+    margin: auto;
+    max-width: 100%;
+    padding: 0 var(--gutterX);
+}
+
+[class*="wrapper-"] {
+    margin: auto;
+    max-width: 100%;
+    padding: 0 var(--gutterX);
+}
+
+[class*="wrapper_"] {
+    margin: auto;
+    max-width: 100%;
+    padding: 0 var(--gutterX);
+}
+
+[class*="-wrapper"],
+[class*="_wrapper"],
+[class*="-container"],
+[class*="_container"] {
+    --gutterX: 0;
+}
+
+/* Row / Group  gap, column setting*/
+
+[class*="row"],
+[class*="group"] {
+    --gap: 0px;
+    --gapX: var(--gap);
+    --gapY: var(--gap);
+    --col: 1;
+}
+
+
+/* Group */
+
+[class~="group"] {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(var(--gapX) / -2);
+}
+
+[class*="-group"] {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(var(--gapX) / -2);
+}
+
+[class*="_group"] {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(var(--gapX) / -2);
+}
+
+
+/* Row */
+
+[class~="row"] {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(var(--gapX) / -2);
+}
+
+[class*="-row"] {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(var(--gapX) / -2);
+}
+
+[class*="_row"] {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(var(--gapX) / -2);
+}
+
+
+/* Row / Group margin top setting*/
+
+[class*="row"],
+[class*="group"] {
+    margin-top: calc(var(--gapY) * -1);
+}
+
+
+/* Group box / item / content / list */
+
+[class*="group"]>[class*="box-"],
+[class*="group"]>[class*="box_"],
+[class*="group"]>[class*="-box"],
+[class*="group"]>[class*="_box"] {
+    --width: calc(100% / var(--col));
+    --multiply: 1;
+    width: calc((var(--width) * var(--multiply)) - var(--gapX));
+    margin: 0 calc(var(--gapX) / 2);
+    margin-top: var(--gapY);
+}
+
+[class*="group"]>[class*="item-"],
+[class*="group"]>[class*="item_"],
+[class*="group"]>[class*="-item"],
+[class*="group"]>[class*="_item"] {
+    --width: calc(100% / var(--col));
+    --multiply: 1;
+    width: calc((var(--width) * var(--multiply)) - var(--gapX));
+    margin: 0 calc(var(--gapX) / 2);
+    margin-top: var(--gapY);
+}
+
+[class*="group"]>[class*="list-"],
+[class*="group"]>[class*="list_"],
+[class*="group"]>[class*="-list"],
+[class*="group"]>[class*="_list"] {
+    --width: calc(100% / var(--col));
+    --multiply: 1;
+    width: calc((var(--width) * var(--multiply)) - var(--gapX));
+    margin: 0 calc(var(--gapX) / 2);
+    margin-top: var(--gapY);
+}
+
+[class*="group"]>[class*="content-"],
+[class*="group"]>[class*="content_"],
+[class*="group"]>[class*="-content"],
+[class*="group"]>[class*="_content"] {
+    --width: calc(100% / var(--col));
+    --multiply: 1;
+    width: calc((var(--width) * var(--multiply)) - var(--gapX));
+    margin: 0 calc(var(--gapX) / 2);
+    margin-top: var(--gapY);
+}
+
+
+/* Row box / item / content / list */
+
+[class*="row"]>[class*="box-"],
+[class*="row"]>[class*="box_"],
+[class*="row"]>[class*="-box"],
+[class*="row"]>[class*="_box"] {
+    --width: calc(100% / var(--col));
+    --multiply: 1;
+    width: calc((var(--width) * var(--multiply)) - var(--gapX));
+    margin: 0 calc(var(--gapX) / 2);
+    margin-top: var(--gapY);
+}
+
+[class*="row"]>[class*="item-"],
+[class*="row"]>[class*="item_"],
+[class*="row"]>[class*="-item"],
+[class*="row"]>[class*="_item"] {
+    --width: calc(100% / var(--col));
+    --multiply: 1;
+    width: calc((var(--width) * var(--multiply)) - var(--gapX));
+    margin: 0 calc(var(--gapX) / 2);
+    margin-top: var(--gapY);
+}
+
+[class*="row"]>[class*="list-"],
+[class*="row"]>[class*="list_"],
+[class*="row"]>[class*="-list"],
+[class*="row"]>[class*="_list"] {
+    --width: calc(100% / var(--col));
+    --multiply: 1;
+    width: calc((var(--width) * var(--multiply)) - var(--gapX));
+    margin: 0 calc(var(--gapX) / 2);
+    margin-top: var(--gapY);
+}
+
+[class*="row"]>[class*="content-"],
+[class*="row"]>[class*="content_"],
+[class*="row"]>[class*="-content"],
+[class*="row"]>[class*="_content"] {
+    --width: calc(100% / var(--col));
+    --multiply: 1;
+    width: calc((var(--width) * var(--multiply)) - var(--gapX));
+    margin: 0 calc(var(--gapX) / 2);
+    margin-top: var(--gapY);
+}
+
+
+/* Custom Grid Responsive */
+
+@media (min-width: 576px) {
+    [class~="container"] {
+        max-width: 540px;
+    }
+
+    [class*="container-"] {
+        max-width: 540px;
+    }
+
+    [class*="container_"] {
+        max-width: 540px;
+    }
+
+    [class~="wrapper"] {
+        max-width: 540px;
+    }
+
+    [class*="wrapper-"] {
+        max-width: 540px;
+    }
+
+    [class*="wrapper_"] {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    [class~="container"] {
+        max-width: 720px;
+    }
+
+    [class*="container-"] {
+        max-width: 720px;
+    }
+
+    [class*="container_"] {
+        max-width: 720px;
+    }
+
+    [class~="wrapper"] {
+        max-width: 720px;
+    }
+
+    [class*="wrapper-"] {
+        max-width: 720px;
+    }
+
+    [class*="wrapper_"] {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    [class~="container"] {
+        max-width: 960px;
+    }
+
+    [class*="container-"] {
+        max-width: 960px;
+    }
+
+    [class*="container_"] {
+        max-width: 960px;
+    }
+
+    [class~="wrapper"] {
+        max-width: 960px;
+    }
+
+    [class*="wrapper-"] {
+        max-width: 960px;
+    }
+
+    [class*="wrapper_"] {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    [class~="container"] {
+        max-width: 1140px;
+    }
+
+    [class*="container-"] {
+        max-width: 1140px;
+    }
+
+    [class*="container_"] {
+        max-width: 1140px;
+    }
+
+    [class~="wrapper"] {
+        max-width: 1140px;
+    }
+
+    [class*="wrapper-"] {
+        max-width: 1140px;
+    }
+
+    [class*="wrapper_"] {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    [class~="container"] {
+        max-width: 1320px;
+    }
+
+    [class*="container-"] {
+        max-width: 1320px;
+    }
+
+    [class*="container_"] {
+        max-width: 1320px;
+    }
+
+    [class~="wrapper"] {
+        max-width: 1320px;
+    }
+
+    [class*="wrapper-"] {
+        max-width: 1320px;
+    }
+
+    [class*="wrapper_"] {
+        max-width: 1320px;
+    }
+}
+
+[class*="-wrapper"],
+[class*="_wrapper"],
+[class*="-container"],
+[class*="_container"] {
+    max-width: 100%;
+}
+
+[class*="-full"],
+[class*="_full"],
+[class*="full-"],
+[class*="full_"] {
+    max-width: 100%;
+}
+
+
+/* Content Allignment */
+
+[class*="centerA"] {
+    justify-content: center;
+    align-items: center;
+}
+
+[class*="Xcenter"] {
+    justify-content: center;
+}
+
+[class*="Ycenter"] {
+    align-items: center;
+}
+
+[class*="group"]>[class*="centerA"],
+[class*="group"]>[class*="Xcenter"],
+[class*="group"]>[class*="Ycenter"] {
+    display: flex;
+}
+
+[class*="row"]>[class*="centerA"],
+[class*="row"]>[class*="Xcenter"],
+[class*="row"]>[class*="Ycenter"] {
+    display: flex;
+}
+
+[class*="textA"] {
+    text-align: center;
+}
+
+[class*="textR"] {
+    text-align: right;
+}
+
+[class*="textL"] {
+    text-align: left;
+}
+
+[class*="right"] {
+    justify-content: flex-end;
+}
+
+[class*="gap"] {
+    justify-content: space-between;
+}
+
+[class*="flex"] {
+    display: flex;
+}
+
+
+/* Image or object Fit To Screen Div */
+
+[class*="sketch"],
+[class*="-sketch"],
+[class*="_sketch"],
+[class*="sketch-"],
+[class*="sketch_"],
+[class*="canvas"],
+[class*="-canvas"],
+[class*="_canvas"],
+[class*="canvas-"],
+[class*="canvas_"] {
+    --fit: 100;
+    padding-top: calc(var(--fit) * 1%);
+}
+
+[class*="obj-"]::before,
+[class*="obj_"]::before,
+[class*="-obj"]::before,
+[class*="_obj"]::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    --fit: 100;
+    padding-top: calc(var(--fit) * 1%);
+    display: block;
+    background-color: #ededed;
+}
+
+[class*="fit"] {
+    position: relative;
+}
+
+[class*="fit"] video,
+[class*="fit"] img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-position: center center;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+[class*="fit"] *:not(video),
+[class*="fit"] *:not(img) {
+    z-index: 2;
+}
+
+
+/* Ancor Button And Input Controll */
+
+[class*="btn"] {
+    border: 0;
+    outline: 0;
+    line-height: 1;
+    height: 70px;
+    padding: 15px 69px;
+    color: var(--textPrimary);
+}
+
+a[class*="btn"] {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #ededed;
+}
+
+button[class*="btn"] {
+    cursor: pointer;
+    background-color: #ededed;
+}
+
+input[class*="btn"] {
+    border: 1px solid #ededed;
+    background-color: transparent;
+}
+
+textarea {
+    outline: 0;
+    display: flex;
+    padding: 10px 15px;
+    border: 1px solid #ededed;
+}
+
+[class*="btn-"],
+[class*="btn_"] {
+    justify-content: center;
+    align-items: center;
+}
+
+a[class*="btn-"],
+a[class*="btn_"] {
+    display: inline-flex;
+}
+
+input[class*="btn-"],
+input[class*="btn_"],
+button[class*="btn-"],
+button[class*="btn_"] {
+    display: flex;
+}
+
+input[class*="center"],
+button[class*="center"],
+textarea[class*="center"] {
+    margin: auto;
+}
+
+input[class*="right"],
+button[class*="right"],
+textarea[class*="right"] {
+    margin-left: auto;
+}
+
+a[class*="full"],
+input[class*="full"],
+button[class*="full"],
+textarea[class*="full"] {
+    width: 100%;
+}
+
+form>[class*="wrap"] {
+    display: flex;
+}
+
+[class*="space"] {
+    display: flex;
+    --space: 0;
+}
+
+[class*="wrap-space"]>[class*="btn"]:not(:last-child),
+[class*="wrap_space"]>[class*="btn"]:not(:last-child),
+[class*="wrap space"]>[class*="btn"]:not(:last-child) {
+    margin-right: var(--space);
+}
+
+[class*="wrap"]>input {
+    width: 100%;
+}
+
+[class*="wrap-space"]>[class*="animation"]:not(:last-child) [class*="btn"],
+[class*="wrap_space"]>[class*="animation"]:not(:last-child) [class*="btn"],
+[class*="wrap space"]>[class*="animation"]:not(:last-child) [class*="btn"] {
+    margin-right: var(--space);
+}
+
+[class*="btn-"]>svg[class*="icon"],
+[class*="btn_"]>svg[class*="icon"],
+[class*="btn-"]>img[class*="icon"],
+[class*="btn_"]>img[class*="icon"] {
+    height: 1em;
+    width: auto;
+    box-sizing: content-box;
+}
+
+
+/* Link Button Input Textarea Styling */
+
+[class*="border"] {
+    border: 1px solid;
+}
+
+
+/* Button Color */
+
+a[class*="primary"],
+button[class*="primary"] {
+    background: var(--cP);
+    color: var(--cWhite);
+    transition: .3s;
+    border-radius: 5px;
+}
+
+a[class*="primary"]:hover,
+button[class*="primary"]:hover {
+    background: var(--cWhite);
+    color: var(--cP);
+}
+
+a[class*="secondary"],
+button[class*="secondary"] {
+    background: var(--cWhite);
+    color: var(--cP);
+    transition: .3s;
+    border-radius: 5px;
+}
+a[class*="secondary"]:hover,
+button[class*="secondary"]:hover {
+    background-color: var(--cBlack);
+    color: var(--cWhite);
+    border-color: var(--cBlack);
+}
+
+a[class*="dark"],
+button[class*="dark"] {
+    background-color: var(--cBlack);
+    color: var(--cWhite);
+    transition: .3s;
+    border-radius: 5px;
+}
+a[class*="dark"]:hover,
+button[class*="dark"]:hover {
+    background-color: var(--cP);
+    color: var(--cWhite);
+    border-color: var(--cP);
+}
+
+a[class*="gray"],
+button[class*="gray"] {
+    background-color: var(--btnGray);
+    color: var(--linkPrimary);
+    border-color: var(--btnGray);
+}
+
+
+a[class*="transparent"],
+button[class*="transparent"] {
+    color: var(--cWhite);
+    background-color: rgba(255, 255, 255, .14);
+    border: 2px solid rgba(255, 255, 255, .7);
+    transition: .3s;
+    border-radius: 5px;
+}
+
+a[class*="transparent"]:hover,
+button[class*="transparent"]:hover {
+    background: var(--cWhite);
+    color: var(--cP);
+}
+
+[class*="radius"] {
+    border-radius: 8px;
+}
+
+
+/* Border Color  */
+
+[class*="border"] {
+    background-color: transparent !important;
+}
+
+[class*="border-primary"],
+[class*="border_primary"],
+[class*="border primary"] {
+    color: var(--btnPrimary) !important;
+}
+
+[class*="border-secondary"],
+[class*="border_secondary"],
+[class*="border secondary"] {
+    color: var(--btnSecondary) !important;
+}
+
+[class*="border-darkred"],
+[class*="border_darkred"],
+[class*="border darkred"] {
+    color: var(--btnDarkRed) !important;
+}
+
+[class*="border-gray"],
+[class*="border_gray"],
+[class*="border gray"] {
+    color: var(--btnGray) !important;
+}
+
+.animation_link {
+    opacity: 0;
+}
+
+.slick-current.slick-active .hero_sub_title .animation_item {
+    animation: 1s cubic-bezier(0.26, 0.54, 0.32, 1) 0.7s forwards;
+    animation-name: rise-up;
+}
+
+.slick-current.slick-active .hero_sub_title .animation_item {
+    animation: 1s cubic-bezier(0.26, 0.54, 0.32, 1) 0.7s forwards;
+    animation-name: rise-up;
+}
+
+.slick-current.slick-active .link_button_group .link_button {
+    animation: fade-in 2s ease 1.3s forwards;
+}
+
+.slick-current.slick-active .link_button_group .link_button:nth-child(2) {
+    animation: fade-in 2s ease 1.6s forwards;
+}
+
+
+/* Animation Css Start */
+
+
+/* Button Link Hover Animation  */
+
+
+/* must use 
+    1. data-style="border" for agter animation
+*/
+
+[data-style*="border"] {
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    border-bottom-color: rgba(0, 0, 0, 0.15);
+}
+
+[data-style*="border"]::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 0%;
+    bottom: -2px;
+    border-bottom: 2px solid currentColor;
+    transition: width 0.5s ease;
+}
+
+[data-style*="border"]:hover::after {
+    width: 100%;
+}
+
+
+/* must use 
+      1. data-style="shine" default
+      2. data-style="shine white" for white button
+  */
+
+@keyframes shine {
+    to {
+        left: -200%;
+    }
+}
+
+[data-style*="shine"] {
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s ease 0s;
+}
+
+[data-style*="shine"]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 150%;
+    width: 200%;
+    height: 100%;
+    transform: skewX(-20deg);
+    background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+}
+
+[data-style*="white"]::after {
+    background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.3), transparent);
+}
+
+[data-style*="shine"]:hover::after {
+    animation: shine 0.75s cubic-bezier(0.01, 0.56, 1, 1);
+}
+
+
+/* Animatio Rise Up */
+
+
+/* must use 
+      1. data-style="riseUp" for wapping inside animation_cropper
+      2. data-style="animation" for use data attribute animation delay and duration
+      3. data-delay=".3"
+      4. data-duration=".8"
+  */
+
+@keyframes riseUp {
+    0% {
+        opacity: 1;
+        transform: translateY(120%);
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+[class*="animation_cropper"] {
+    overflow: hidden;
+    opacity: 0;
+}
+
+[class*="-active"] [class*="animation_cropper"] {
+    opacity: 1;
+}
+
+[class*="crop_content"] {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: none;
+    animation-delay: 0.3s;
+    animation-duration: 0.8s;
+}
+
+[class*="-active"] [class*="crop_content"] {
+    /* transform: translateY(0px); */
+    animation-name: riseUp;
+    animation-timing-function: cubic-bezier(0.26, 0.54, 0.32, 1);
+    animation-fill-mode: forwards;
+}
+
+
+/* Fade In */
+
+
+/* must use 
+      1. data-style="fadeIn" for wapping inside animation_item
+      2. data-style="animation" for use data attribute animation delay and duration
+      3. data-delay="2s"
+      4. data-duration="1.6s"
+  */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+[data-style*="fadeIn"] {
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    opacity: 0;
+}
+
+[data-style*="fadeIn"].open,
+[class*="-active"] [data-style*="fadeIn"] {
+    animation-name: fadeIn;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+
+/* Sticky NavBar */
+
+[data-style*="sticky"] {
+    z-index: 9999;
+    position: relative;
+}
+
+[data-style*="sticky"].active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translate3d(0, -100%, 0);
+}
+
+[data-style*="sticky"].active.open {
+    transform: translateZ(0);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+/* Toggle Activation */
+
+
+/* must use 
+  1. data-toggle="open" in click button
+  2. data-toggle="close" in click button
+  3. data-toggle="content" in content wrap which will show
+  4. data-target="any thing" must match in those open, close and content
+  */
+
+
+/* Mobile Menu Left To Right Animation*/
+
+[data-style*="left-to-right"] {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: -53%;
+    width: 53%;
+    max-width: 95%;
+    z-index: 99999;
+    background: #1b232e;
+    color: var(--cWhite);
+    box-shadow: 0 0 150px rgb(0 0 0 / 10%);
+    transform: translateX(0px);
+    transition: transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+[data-style*="left-to-right"].open {
+    transform: translateX(100%);
+}
+
+[data-style*="right-to-left"] {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    right: -50%;
+    width: 50%;
+    max-width: 95%;
+    z-index: 99999;
+    background: #222C39;
+    color: #CCD2D9;
+    transition: right 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+[data-style*="right-to-left"].open {
+    right: 0;
+}
+
+
+/* Animation Auto */
+
+
+/* must use 
+      1. data-style="animation-auto" (child Item will animate not this div)
+      2. data-delay-unit=".2" animation delay increment set
+      3. data-style="animation" in chield div for for custom animation duration in each div
+      4. data-style="fix-duration" in prent div for equal animatio time and use (data-duratio-unit) for valu set  
+      3. data-duratin-unit="1" same animation time in all chield, must use (fix-duration for this property)
+      4. data-target="any thing" must match in those open, close and content
+  */
+
+@keyframes fadeInSlideUp {
+    0% {
+        top: 50px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+[data-style*="fade_InSlide_Up"],
+[data-style*="animation-auto"][data-style*="fade_InSlide_Up"]>* {
+    position: relative;
+    animation-delay: 0.1s;
+    animation-duration: 1s;
+}
+
+[data-style*="fade_InSlide_Up"].open,
+[data-style*="animation-auto"][data-style*="fade_InSlide_Up"].open>*,
+:hover>[data-style*="animation-auto"][data-style*="fade_InSlide_Up"]>* {
+    animation: fadeInSlideUp 0.5s ease forwards;
+    top: 50px;
+    opacity: 0;
+}
+
+
+/* Fade In Slide Up*/
+
+
+/* must use 
+      1. data-style="fadeInSlideUp" in animation_item
+      2. data-style="animation" for use data attribute animation delay and duration
+      3. data-delay="2s"
+      4. data-duration="1.6s" 
+      5. In animation auto this datay-style and animation auto set in parent div (see animation auto)
+  
+  */
+
+@keyframes fadeOutSlideDown {
+    0% {
+        top: 0;
+        opacity: 1;
+    }
+
+    100% {
+        top: 50px;
+        opacity: 0;
+    }
+}
+
+[data-style*="fadeOutSlideDown"],
+[data-style*="animation-auto"][data-style*="fadeOutSlideDown"]>* {
+    position: relative;
+    animation-delay: 0.1s;
+    animation-duration: 1s;
+}
+
+[data-style*="fadeOutSlideDown"].open,
+[data-style*="animation-auto"][data-style*="fadeOutSlideDown"].open>*,
+:hover>[data-style*="fadeOutSlideDown"]>* {
+    animation: fadeOutSlideDown 0.5s ease forwards;
+    top: 0;
+    opacity: 1;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+[data-style*="spin"] {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes ping {
+
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+[data-style*="ping"] {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+[data-style*="pulse"] {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(-25%);
+        animationtimingfunction: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+        transform: translateY(0);
+        animationtimingfunction: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+[data-style*="bounce"] {
+    animation: bounce 1s infinite;
+}
+
+
+/* General Setting For Design */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--cBlack);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 10px;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: calc((170px / 3360) * 1920);
+    line-height: calc(150/170);
+}
+
+h2 {
+    font-size: calc((120px / 3360) * 1920);
+    line-height: calc(110/120);
+}
+
+h3 {
+    font-size: calc((100px / 3360) * 1920);
+    line-height: 1;
+}
+
+h3.st{
+    line-height: 1.1;
+}
+
+h4 {
+    font-size: calc((60px / 3360) * 1920);
+    line-height: calc(110/60);
+}
+
+h5.lg {
+    font-size: calc((40px / 3360) * 1920);
+    line-height: calc(110/40);
+    font-style: normal;
+}
+h5 {
+    font-size: calc((24px / 3360) * 1920);
+    line-height: calc(20/24);
+    font-weight: 800;
+}
+
+h6 {
+    font-size: calc((36px / 3360) * 1920);
+    line-height: calc(44/36);
+    font-weight: 600;
+    font-style: normal;
+}
+button,
+a {
+    font-size: calc((28px / 3360) * 1920);
+    font-weight: 600;
+    text-decoration: none;
+    color: currentColor;
+    display: block;
+    outline: 0;
+    border: 0;
+}
+
+a:hover {
+    color: currentColor;
+}
+
+p{
+    font-size: calc((28px / 3360) * 1920);
+    line-height: calc(42/28);
+    font-weight: 400;
+    color: var(--cS);
+} 
+
+p.lgsb{
+    font-size: calc((32px / 3360) * 1920);
+    font-weight: 600;
+}
+
+p.lgb{
+    font-size: calc((32px / 3360) * 1920);
+    font-weight: 700;
+} 
+ 
+p.lgm{
+    font-size: calc((32px / 3360) * 1920);
+    font-weight: 500;
+} 
+p.lg{
+    font-size: calc((32px / 3360) * 1920);
+    font-weight: 400;
+    line-height: calc(50/32);
+    
+} 
+p.md{
+    font-size: calc((30px / 3360) * 1920);
+    line-height: calc(50/30);
+    font-weight: 400;
+} 
+p.mdm{
+    font-size: calc((30px / 3360) * 1920);
+    line-height: calc(30/30);
+    font-weight: 500;
+} 
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+ul.sp li{
+    font-size: calc((40px / 3360) * 1920);
+    line-height: calc(40/30);
+    font-weight: 600;
+}

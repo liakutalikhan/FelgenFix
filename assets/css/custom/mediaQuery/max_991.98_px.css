@@ -1,0 +1,8 @@
+/* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {
+    .header .social .social_links {
+        flex-flow: wrap;
+        width: 133px;
+    }
+}
